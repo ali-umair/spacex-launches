@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.launch-latest {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.launch-latest > img {
+  width: 100px;
+  height: 150px;
+}
+
+.launch-latest > p {
+  margin-top: 20px;
+  text-align: center;
+}
