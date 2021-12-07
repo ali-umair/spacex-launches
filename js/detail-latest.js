@@ -22,10 +22,14 @@ function nodeHandler() {
     const landingType = document.querySelector('.landing-type');
     const legs = document.querySelector('.legs');
     const reused = document.querySelector('.reused');
+    const coreId = document.querySelector('.core-id');
+    const coreBlock = document.querySelector('.core-block');
+    const asdsAttempts = document.querySelector('.asds-attempts');
+    const asdsLandings = document.querySelector('.asds-landings');
 
     return [
         title, h1, rocketName, rocketId, rocketType, cores, block, flight, gridfins, 
-        landingIntent, landingType, legs, reused
+        landingIntent, landingType, legs, reused, coreId, coreBlock, asdsAttempts, asdsLandings
     ];
 }
 
@@ -59,6 +63,14 @@ function dataHandler(data) {
     nodes[11].textContent = data.rocket.first_stage.cores[0].legs;
 
     nodes[12].textContent = data.rocket.first_stage.cores[0].reused;
+
+    nodes[13].textContent = data.rocket.first_stage.cores[0].core.id;
+
+    nodes[14].textContent = data.rocket.first_stage.cores[0].core.block;
+
+    nodes[15].textContent = data.rocket.first_stage.cores[0].core.asds_attempts;
+
+    nodes[16].textContent = data.rocket.first_stage.cores[0].core.asds_landings;
 
     // console.log(data);
 }
