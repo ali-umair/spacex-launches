@@ -7,47 +7,58 @@ fetch('https://api.spacex.land/rest/launch-next')
 });
 
 
-function dataHandler(data) {
+function nodeHandler() {
 
     const title = document.querySelector('title');
-    title.textContent = `${data.mission_name} Details`;
-
     const h1 = document.querySelector('h1');
-    h1.textContent = `${data.mission_name} Details`;
-
     const rocketName = document.querySelector('.rocket-name');
-    rocketName.textContent = data.rocket.rocket_name;
-
     const rocketId = document.querySelector('.rocket-id');
-    rocketId.textContent = data.rocket.rocket.id;
-
     const rocketType = document.querySelector('.rocket-type');
-    rocketType.textContent = data.rocket.rocket_type;
-
     const cores = document.querySelector('.cores');
-    cores.textContent = `Cores: ${Object.keys(data.rocket.first_stage).length}`;
+    const block = document.querySelector('.block');
+    const flight = document.querySelector('.flight');
+    const gridfins = document.querySelector('.gridfins');
+    const landingIntent = document.querySelector('.landing-intent');
+    const landingType = document.querySelector('.landing-type');
+    const legs = document.querySelector('.legs');
+    const reused = document.querySelector('.reused');
 
-    // const rocketType = document.querySelector('.rocket-type');
-    // rocketType.textContent = data.rocket.rocket_type;
+    return [
+        title, h1, rocketName, rocketId, rocketType, cores, block, flight, gridfins, 
+        landingIntent, landingType, legs, reused
+    ];
+}
 
-    // const rocketType = document.querySelector('.rocket-type');
-    // rocketType.textContent = data.rocket.rocket_type;
 
-    // const rocketType = document.querySelector('.rocket-type');
-    // rocketType.textContent = data.rocket.rocket_type;
+function dataHandler(data) {
 
-    // const rocketType = document.querySelector('.rocket-type');
-    // rocketType.textContent = data.rocket.rocket_type;
+    const nodes = nodeHandler();
 
-    // const rocketType = document.querySelector('.rocket-type');
-    // rocketType.textContent = data.rocket.rocket_type;
+    nodes[0].textContent = `${data.mission_name} Details`;
 
-    // const rocketType = document.querySelector('.rocket-type');
-    // rocketType.textContent = data.rocket.rocket_type;
+    nodes[1].textContent = `${data.mission_name} Details`;
 
-    // const rocketType = document.querySelector('.rocket-type');
-    // rocketType.textContent = data.rocket.rocket_type;
-    // console.log(data);
+    nodes[2].textContent = data.rocket.rocket_name;
+
+    nodes[3].textContent = data.rocket.rocket.id;
+
+    nodes[4].textContent = data.rocket.rocket_type;
+
+    nodes[5].textContent = `Cores: ${Object.keys(data.rocket.first_stage).length}`;
+
+    nodes[6].textContent = data.rocket.first_stage.cores[0].block;
+
+    nodes[7].textContent = data.rocket.first_stage.cores[0].flight;
+
+    nodes[8].textContent = data.rocket.first_stage.cores[0].gridfins;
+
+    nodes[9].textContent = data.rocket.first_stage.cores[0].landing_intent;
+
+    nodes[10].textContent = data.rocket.first_stage.cores[0].landing_type;
+
+    nodes[11].textContent = data.rocket.first_stage.cores[0].legs;
+
+    nodes[12].textContent = data.rocket.first_stage.cores[0].reused;
 
     // console.log(data);
 }
