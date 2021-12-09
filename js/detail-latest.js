@@ -26,10 +26,15 @@ function nodeHandler() {
     const coreBlock = document.querySelector('.core-block');
     const asdsAttempts = document.querySelector('.asds-attempts');
     const asdsLandings = document.querySelector('.asds-landings');
+    const coreReuseCount = document.querySelector('.core-reuse-count');
+    const previousMissionCount = document.querySelector('.previous-missions-count');
+    const previousMissionName = document.querySelector('.previous-missions-name');
+    const previousMissionFlight = document.querySelector('.previous-missions-flight');
 
     return [
         title, h1, rocketName, rocketId, rocketType, cores, block, flight, gridfins, 
-        landingIntent, landingType, legs, reused, coreId, coreBlock, asdsAttempts, asdsLandings
+        landingIntent, landingType, legs, reused, coreId, coreBlock, asdsAttempts, asdsLandings,
+        coreReuseCount, previousMissionCount, previousMissionName, previousMissionFlight
     ];
 }
 
@@ -37,6 +42,16 @@ function nodeHandler() {
 function dataHandler(data) {
 
     const nodes = nodeHandler();
+
+    // const n = () => {
+    //     let i = 0;
+    //     for(let i=0; i<=16; i++){
+    //         return i;   
+    //     }
+    //     return i;
+    // }
+
+    // console.log(n);
 
     nodes[0].textContent = `${data.mission_name} Details`;
 
@@ -71,6 +86,18 @@ function dataHandler(data) {
     nodes[15].textContent = data.rocket.first_stage.cores[0].core.asds_attempts;
 
     nodes[16].textContent = data.rocket.first_stage.cores[0].core.asds_landings;
+
+    nodes[17].textContent = data.rocket.first_stage.cores[0].core.reuse_count;
+
+    console.log(data.rocket.first_stage.cores[0].core.missions[0].name);
+
+    nodes[18].textContent = data.rocket.first_stage.cores[0].core.missions.length;
+
+    nodes[19].textContent = `"${data.rocket.first_stage.cores[0].core.missions[0].name}" - 
+    "${data.rocket.first_stage.cores[0].core.missions[1].name}" - 
+    "${data.rocket.first_stage.cores[0].core.missions[2].name}"`;
+
+    // nodes[20].textContent = data.rocket.first_stage.cores[0].core.reuse_count;
 
     // console.log(data);
 }
