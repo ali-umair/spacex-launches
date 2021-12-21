@@ -9,14 +9,17 @@
     <script src="./js/detail-latest.js"></script>
 
     <script id="template" type="text/template">
-        <h1>Details: {{data.mission_name}}</h1>
+        <h1>{{data.mission_name}}</h1>
+        <p><span class="key">ID: </span>{{data.rocket.rocket.id}}</p>
+        <p><span class="key">Rocket name: </span>{{data.rocket.rocket_name}}</p>
+        <p><span class="key">Type: </span>{{data.rocket.rocket_type}}</p>
+        <p><span class="key">No. of cores: </span>{{Object.keys(data.rocket.first_stage).length}}</p>
     </script>
 
     <title></title>
 </head>
 <body>
     <!-- <h1></h1>
-    <p class="rocket-name"></p>
     <p class="rocket-id"></p>
     <p class="rocket-type"></p>
     <h4>First Stage</h4>

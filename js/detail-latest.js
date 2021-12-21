@@ -64,8 +64,6 @@ function renderTemplate(data) {
 
 //     // console.log(n);
 
-//     nodes[0].textContent = `${data.mission_name} Details`;
-
 //     nodes[1].textContent = `${data.mission_name} Details`;
 
 //     nodes[2].textContent = data.rocket.rocket_name;
