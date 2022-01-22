@@ -64,16 +64,6 @@ function renderTemplate(data) {
 
 //     // console.log(n);
 
-//     nodes[1].textContent = `${data.mission_name} Details`;
-
-//     nodes[2].textContent = data.rocket.rocket_name;
-
-//     nodes[3].textContent = data.rocket.rocket.id;
-
-//     nodes[4].textContent = data.rocket.rocket_type;
-
-//     nodes[5].textContent = `Cores: ${Object.keys(data.rocket.first_stage).length}`;
-
 //     nodes[6].textContent = data.rocket.first_stage.cores[0].block;
 
 //     nodes[7].textContent = data.rocket.first_stage.cores[0].flight;

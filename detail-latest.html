@@ -14,16 +14,13 @@
         <p><span class="key">Rocket name: </span>{{data.rocket.rocket_name}}</p>
         <p><span class="key">Type: </span>{{data.rocket.rocket_type}}</p>
         <p><span class="key">No. of cores: </span>{{Object.keys(data.rocket.first_stage).length}}</p>
+        <p><span class="key">Block: </span>{{data.rocket.first_stage.cores[0].block}}</p>
     </script>
 
     <title></title>
 </head>
 <body>
     <!-- <h1></h1>
-    <p class="rocket-id"></p>
-    <p class="rocket-type"></p>
-    <h4>First Stage</h4>
-    <p class="cores"></p>
     <p class="block"></p>
     <p class="flight"></p>
     <p class="landing-type"></p>
