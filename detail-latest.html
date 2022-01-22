@@ -15,31 +15,33 @@
         <p><span class="key">Type: </span>{{data.rocket.rocket_type}}</p>
         <p><span class="key">No. of cores: </span>{{Object.keys(data.rocket.first_stage).length}}</p>
         <p><span class="key">Block: </span>{{data.rocket.first_stage.cores[0].block}}</p>
+        <p><span class="key">Flight #: </span>{{data.rocket.first_stage.cores[0].flight}}</p>
+        <p><span class="key">Landing Type: </span>{{data.rocket.first_stage.cores[0].landing_type}}</p>
+        <a href="https://en.wikipedia.org/wiki/Autonomous_spaceport_drone_ship" target="_blank">
+            More about ASDS
+        </a>
+        <p><span class="key">Landing Intent: </span>{{data.rocket.first_stage.cores[0].landing_intent}}</p>
+        <p><span class="key">Gridfins: </span>{{data.rocket.first_stage.cores[0].gridfins}}</p>
+        <p><span class="key">Legs: </span>{{data.rocket.first_stage.cores[0].legs}}</p>
+        <p><span class="key">Reused: </span>{{data.rocket.first_stage.cores[0].reused}}</p>
+        <h4>Core Info</h4>
+        <p><span class="key">Core ID: </span>{{data.rocket.first_stage.cores[0].core.id}}</p>
+        <p><span class="key">Core Block: </span>{{data.rocket.first_stage.cores[0].core.block}}</p>
+        <p><span class="key">ASDS Attempts: </span>{{data.rocket.first_stage.cores[0].core.asds_attempts}}</p>
+        <p><span class="key">ASDS Landings: </span>{{data.rocket.first_stage.cores[0].core.asds_landings}}</p>
+        <p><span class="key">Core Reuse Count: </span>{{data.rocket.first_stage.cores[0].core.reuse_count}}</p>
+        <h4>Previous Missions</h4>
+        <p><span class="key">Previous Missions Count: </span>{{data.rocket.first_stage.cores[0].core.missions.length}}</p>
+        <p><span class="key">Previous Missions Names: </span>
+                        {{data.rocket.first_stage.cores[0].core.missions[0].name}} - 
+                        {{data.rocket.first_stage.cores[0].core.missions[1].name}} - 
+                        {{data.rocket.first_stage.cores[0].core.missions[2].name}}
+        </p>
+        <p><span class="key">Previous Missions Flight: </span>{{data.rocket.first_stage.cores[0].core.reuse_count}}</p>
     </script>
 
     <title></title>
 </head>
 <body>
-    <!-- <h1></h1>
-    <p class="block"></p>
-    <p class="flight"></p>
-    <p class="landing-type"></p>
-    <a href="https://en.wikipedia.org/wiki/Autonomous_spaceport_drone_ship" target="_blank">
-        More about ASDS
-    </a>
-    <p class="landing-intent"></p>
-    <p class="gridfins"></p>
-    <p class="legs"></p>
-    <p class="reused"></p>
-    <h4>Core Info</h4>
-    <p class="core-id"></p>
-    <p class="core-block"></p>
-    <p class="asds-attempts"></p>
-    <p class="asds-landings"></p>
-    <p class="core-reuse-count"></p>
-    <h4>Previous Missions</h4>
-    <p class="previous-missions-count"></p>
-    <p class="previous-missions-name"></p>
-    <p class="previous-missions-flight"></p> -->
 </body>
 </html>
