@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/detail-latest.css">
-    <script src="./swig.min.js"></script>
+    <script src="./lib/swig.min.js"></script>
     <script src="./js/detail-latest.js"></script>
 
     <script id="template" type="text/template">
         <h1>{{data.mission_name}}</h1>
-        <p><span class="key">ID: </span>{{data.rocket.rocket.id}}</p>
+        <p><span class="key">Mission ID: </span>{{data.mission_id}}</p>
         <p><span class="key">Rocket name: </span>{{data.rocket.rocket_name}}</p>
         <p><span class="key">Type: </span>{{data.rocket.rocket_type}}</p>
         <p><span class="key">No. of cores: </span>{{Object.keys(data.rocket.first_stage).length}}</p>
@@ -40,7 +40,7 @@
         <p><span class="key">Previous Missions Flight: </span>{{data.rocket.first_stage.cores[0].core.reuse_count}}</p>
     </script>
 
-    <title></title>
+    <title>dsfsdsdfsdfsdfsf</title>
 </head>
 <body>
 </body>
